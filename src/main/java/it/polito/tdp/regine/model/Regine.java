@@ -2,6 +2,7 @@ package it.polito.tdp.regine.model;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class Regine {
 
@@ -20,14 +21,19 @@ public class Regine {
 	//            [0, 2, 1]
 	public void posizioni(int N){
 		List<Integer> parziale= new LinkedList<>();
-		parziale.add(0);
-		cerca(parziale, 1, N);
+		
+		//parziale.add(1);
+		cerca(parziale, 0, N);
+		
 	}
 	
-	private void cerca(List<Integer>parziale, int livello, int N) {
+	private  void cerca(List<Integer>parziale, int livello, int N) {
 		if(livello==N) {
-			System.out.println(parziale);
 			// caso terminale
+			
+			//stampo tutte le possibili soluzioni
+		    	System.out.println(parziale);
+
 		} else {
 			
 			for(int colonna=0; colonna<N; colonna++) {
@@ -49,6 +55,5 @@ public class Regine {
 		}
 	}
 	
-	
-	
 }
+	
