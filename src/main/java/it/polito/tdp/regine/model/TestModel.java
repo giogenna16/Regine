@@ -6,8 +6,8 @@ public class TestModel {
 
 	public static void main(String[] args) {
 		Regine prova= new Regine();
-		prova.posizioni(4);
-		
+		List<Integer> stampa =prova.posizioni(5);
+		System.out.print(stampa);
 	}
 
 }
